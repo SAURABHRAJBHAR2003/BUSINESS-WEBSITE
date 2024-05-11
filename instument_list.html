@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        border: 2px solid black;
+        text-align: center;
+    
+        
+         }
+         .table{
+            align-items: center;
+            margin-left: 28%;
+            font-size: 25px;
+         }
+        .table2{
+            background-color: aqua;
+        }
+        .main{
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        
+            
+        }
+
+
+         
+</style>
+<body class="main">
+    <div class="body">
+        <img src="sth.jpg" alt="">
+    <h1><u><i>Saurabh Tent House</i></u></h1>
+    <table border="1px solid black" class="table">
+        <tr>
+            <td>Customer Name :</td>
+            <td><input type="text"></td>
+            <td>Phone No :</td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td>Marrige Date :</td>
+            <td><input type="date"></td>
+            <td>Guardian Name :</td>
+            <td><input type="text"></td>
+
+        </tr>
+        <td>Address :</td>
+        <td colspan="3"><input type="text"></td>
+    </table>
+      <h2>**<u>Instruments List</u>**</h2>
+    <table border="2px" align="center" class="table2">
+        <tr>
+            <th>Items Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Netprice</th>
+        </tr>
+        <tr>
+            <td>plane Tent</td>
+            <td>500</td>
+            <td><input type="text" id="quantity" onkeyup="total()"></td>
+            <td id="netprice" >0</td>
+        </tr>
+        <tr>
+            <td>round Tent</td>
+            <td>700</td>
+            <td><input type="text" id="quantity2" onkeyup="total2()"></td>
+            <td id="netprice2" >0</td>
+        </tr>
+        <tr>
+            <td>Charpai</td>
+            <td>5</td>
+            <td><input type="text" id="quantity3" onkeyup="total3()"></td>
+            <td id="netprice3">0</td>
+        </tr>
+        <tr>
+            <td>kurshi</td>
+            <td>5</td>
+            <td><input type="text" id="quantity4" onkeyup="total3()"></td>
+            <td id="netprice4">0</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">total</td>
+            <td id="totalprice" colspan="2">0</td>
+        </tr>
+    </table>
+</div>
+    <script>
+
+        function total(){
+        let price=500;
+        let qyt=document.getElementById("quantity").value;
+        x=qyt*price;
+        document.getElementById("netprice").innerHTML=x+"Rs";
+        document.getElementById("totalprice");
+       
+        
+        }
+        function total2(){
+        let price=700;
+        let qyt=document.getElementById("quantity2").value;
+        x1=qyt*price;
+        document.getElementById("netprice2").innerHTML=x1+"Rs";
+        
+        }
+        function total3(){
+        let price=5;
+        let qyt=document.querySelectorAll("#quantity3 , quantity4").value;
+        document.querySelectorAll("#netprice3 , #netprice4").innerHTML=qyt*price+"Rs";
+        
+        }
+        function total4(){
+        let price=5;
+        let qyt=document.getElementById("quantity4").value;
+        document.getElementById("netprice4").innerHTML=qyt*price+"Rs";
+        
+        }
+        
+    </script>
+</body>
+</html>
